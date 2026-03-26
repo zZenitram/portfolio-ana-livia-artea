@@ -1,0 +1,1 @@
+import '../../home-component/scripts/home-component.js';
