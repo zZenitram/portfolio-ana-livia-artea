@@ -16,6 +16,7 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  box-sizing: border-box;
 }
 
 html,
@@ -151,5 +152,5 @@ table {
 
 body {
   font-family: system-ui, sans-serif;
-  background-color: hsl(var(--background));
+  background-color: hsla(var(--background), 0.95);
 }
