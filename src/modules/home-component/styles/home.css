@@ -37,8 +37,8 @@ section.ctr-home div.shadow-gradient {
   );
   border-radius: 9999px;
   filter: blur(2rem);
-  height: 24rem;
-  width: 24rem;
+  height: 31rem;
+  width: 31rem;
 }
 
 section.ctr-home div.ctr-introduction {
@@ -57,7 +57,7 @@ section.ctr-home div.ctr-introduction {
     column-gap: 0.5rem;
     font-size: 1.1rem;
     font-weight: 500;
-    color: hsl(var(--primary));
+    color: hsl(var(--muted-foreground));
   }
 
   h1.title {
@@ -104,6 +104,7 @@ section.ctr-home div.ctr-social {
 @media (width <= 1024px) {
   section.ctr-home {
     flex-direction: column;
+    margin-top: 80px;
   }
 
   section.ctr-home div.ctr-introduction {
@@ -124,6 +125,7 @@ section.ctr-home div.ctr-social {
     height: auto;
     padding: 2rem;
     row-gap: 50px;
+    margin-top: 130px;
   }
 
   section.ctr-home div.ctr-banner {
