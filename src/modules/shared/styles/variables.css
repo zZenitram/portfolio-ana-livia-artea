@@ -1,5 +1,5 @@
 :root {
-  --background: 40 33% 97%;
+  --background: 40, 33%, 97%;
   --foreground: 20 10% 15%;
   --card: 40 30% 99%;
   --card-foreground: 20 10% 15%;
@@ -15,4 +15,8 @@
   --accent-foreground: 20 10% 15%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 40 33% 97%;
+  --shadow-soft: 0 4px 20px -4px hsl(20 10% 15% / 0.08);
+  --shadow-elevated: 0 12px 40px -8px hsl(20 10% 15% / 0.12);
+  --ring-offset-shadow: 0 0 #0000;
+  --ring-shadow: 0 0 #0000;
 }
