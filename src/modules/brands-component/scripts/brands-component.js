@@ -7,7 +7,6 @@ class BrandsComponent extends HTMLElement {
 
     async connectedCallback() {
         await this.loadTemplate();
-        this.initController();
     }
 
     async render(html) {

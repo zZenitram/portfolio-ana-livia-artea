@@ -1,13 +1,12 @@
-import { BrandsTemplate } from './about-me-template.js';
+import { AboutMeTemplate } from './about-me-template.js';
 
-class BrandsComponent extends HTMLElement {
+class AboutMeComponent extends HTMLElement {
     constructor() {
         super();
     }
 
     async connectedCallback() {
         await this.loadTemplate();
-        this.initController();
     }
 
     async render(html) {
@@ -16,7 +15,7 @@ class BrandsComponent extends HTMLElement {
     }
 
     async loadTemplate() {
-        const html = await BrandsTemplate.load().catch(err => {
+        const html = await AboutMeTemplate.load().catch(err => {
             this.renderError(err);
             return null;
         });
@@ -25,4 +24,4 @@ class BrandsComponent extends HTMLElement {
     }
 }
 
-customElements.define('about-me-component', BrandsComponent);
+customElements.define('about-me-component', AboutMeComponent);

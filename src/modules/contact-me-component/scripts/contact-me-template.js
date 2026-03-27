@@ -1,4 +1,4 @@
-export class BrandsTemplate {
+export class ContactMeTemplate {
     static async load() {
         const response = await fetch('src/modules/contact-me-component/template.html');
 

@@ -1,4 +1,4 @@
-export class BrandsTemplate {
+export class AboutMeTemplate {
     static async load() {
         const response = await fetch('src/modules/about-me-component/template.html');
 
