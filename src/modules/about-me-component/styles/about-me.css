@@ -6,7 +6,7 @@ section.ctr-about-me {
   gap: 10rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: hsl(var(--secondary) / 0.3);
+  background-color: hsl(var(--secondary), 0.3);
 
   a.btn {
     display: flex;
@@ -130,5 +130,11 @@ section.ctr-about-me div.ctr-cards div.card span.icon {
 
   section.ctr-about-me div.ctr-cards div.card {
     width: 300px;
+  }
+}
+
+@media (width <= 664px) {
+  section.ctr-about-me div.ctr-cards div.card {
+    width: 200px;
   }
 }
