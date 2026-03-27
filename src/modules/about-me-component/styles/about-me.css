@@ -132,3 +132,9 @@ section.ctr-about-me div.ctr-cards div.card span.icon {
     width: 300px;
   }
 }
+
+@media (width <= 664px) {
+  section.ctr-about-me div.ctr-cards div.card {
+    width: 200px;
+  }
+}
