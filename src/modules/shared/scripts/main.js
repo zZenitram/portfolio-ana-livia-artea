@@ -4,3 +4,4 @@ import '../../brands-component/scripts/brands-component.js';
 import '../../about-me-component/scripts/about-me-component.js';
 import '../../contact-me-component/scripts/contact-me-component.js';  
 import '../../article-component/scripts/article-component.js';  
+import '../../footer-component/scripts/footer-component.js';  
