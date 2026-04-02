@@ -6,4 +6,5 @@ import '../../contact-me-component/scripts/contact-me-component.js';
 import '../../services-component/scripts/services-component.js';  
 import '../../gallery-component/scripts/gallery-component.js';  
 import '../../article-component/scripts/article-component.js';  
+import '../../expertise-component/scripts/expertise-component.js';
 import '../../footer-component/scripts/footer-component.js';  
