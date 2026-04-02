@@ -41,10 +41,28 @@ section.ctr-about-me div.ctr-content {
   margin-right: auto;
 }
 
-section.ctr-about-me h3.title {
+section.ctr-about-me div.ctr-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+section.ctr-about-me div.ctr-information h3.title {
   font-size: 2.3rem;
   letter-spacing: 0.05em;
   font-family: serif;
+}
+
+section.ctr-about-me div.ctr-information span.sub-title {
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  font-family: serif;
+  color: hsla(0, 0%, 0%, 0.7);
+  text-align: center;
 }
 
 section.ctr-about-me div.ctr-cards {
