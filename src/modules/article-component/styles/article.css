@@ -30,6 +30,7 @@ section.ctr-article div.ctr-information span.sub-title {
   font-size: 1.7rem;
   letter-spacing: 0.05em;
   font-family: serif;
+  text-align: center;
   color: hsla(0, 0%, 0%, 0.7);
 }
 

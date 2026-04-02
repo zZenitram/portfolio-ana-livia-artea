@@ -33,6 +33,7 @@ section.ctr-gallery > div.ctr-information span.sub-title {
   letter-spacing: 0.05em;
   font-family: serif;
   color: hsla(0, 0%, 0%, 0.7);
+  text-align: center;
 }
 
 section.ctr-gallery div.ctr-cards {
