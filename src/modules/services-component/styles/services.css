@@ -1,0 +1,118 @@
+section.ctr-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5rem;
+  max-width: 72rem;
+  padding: 6rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.ctr-services > div.ctr-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+section.ctr-services > div.ctr-information h3.title {
+  font-size: 2.3rem;
+  letter-spacing: 0.05em;
+  font-family: serif;
+  text-align: center;
+  line-height: 3rem;
+}
+
+section.ctr-services > div.ctr-information span.sub-title {
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  font-family: serif;
+  color: hsla(0, 0%, 0%, 0.7);
+  text-align: center;
+}
+
+section.ctr-services div.ctr-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+section.ctr-services div.ctr-cards div.card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1.5rem;
+  height: 130px;
+  width: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: transform 0.3s linear;
+  background-color: hsl(var(--card));
+  box-shadow:
+    var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000),
+    var(--shadow-soft);
+}
+
+section.ctr-services div.ctr-cards div.card:hover{
+  transform: translateY(-5px);
+}
+
+section.ctr-services div.ctr-cards div.card div.ctr-information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+section.ctr-services div.ctr-cards div.card div.ctr-information span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  color: hsl(var(--primary));
+  background-color: hsla(var(--primary), 0.2);
+}
+
+section.ctr-services div.ctr-cards div.card div.ctr-information h4.title {
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  font-family: serif;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+@media (width <= 1024px) {
+  section.ctr-services div.ctr-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width <= 664px) {
+  section.ctr-services div.ctr-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 443px) {
+  section.ctr-services div.ctr-cards div.card {
+    flex-direction: column;
+    height: auto;
+  }
+}

@@ -1,0 +1,148 @@
+section.ctr-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5rem;
+  max-width: 72rem;
+  padding: 6rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.ctr-gallery > div.ctr-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+section.ctr-gallery > div.ctr-information h3.title {
+  font-size: 2.3rem;
+  letter-spacing: 0.05em;
+  font-family: serif;
+  text-align: center;
+  line-height: 3rem;
+}
+
+section.ctr-gallery > div.ctr-information span.sub-title {
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  font-family: serif;
+  color: hsla(0, 0%, 0%, 0.7);
+  text-align: center;
+}
+
+section.ctr-gallery div.ctr-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+section.ctr-gallery div.ctr-cards div.card {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 1.5rem;
+  height: 8.5rem;
+  width: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: transform 0.3s linear;
+}
+
+section.ctr-gallery div.ctr-cards div.card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+section.ctr-gallery div.ctr-cards div.card.gray {
+  border: 1px solid rgb(234, 234, 234);
+  background-color: hsla(0, 0%, 95%);
+}
+
+section.ctr-gallery div.ctr-cards div.card.green {
+  border: 1px solid rgb(213, 244, 200);
+  background-color: hsla(142, 82%, 94%);
+}
+
+section.ctr-gallery div.ctr-cards div.card.orange {
+  border: 1px solid rgb(243, 221, 184);
+  background-color: hsla(37, 78%, 88%);
+}
+
+section.ctr-gallery div.ctr-cards div.card.blue {
+  border: 1px solid rgb(202, 224, 250);
+  background-color: hsla(203, 67%, 89%);
+}
+
+section.ctr-gallery div.ctr-cards div.card.red {
+  border: 1px solid rgb(238, 194, 194);
+  background-color: hsla(0, 65%, 89%);
+}
+
+section.ctr-gallery div.ctr-cards div.card div.icon-circle {
+  height: 4rem;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+section.ctr-gallery div.ctr-cards div.card div.icon-circle img {
+  padding: 0.6rem;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+section.ctr-gallery div.ctr-cards div.card div.ctr-information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+section.ctr-gallery div.ctr-cards div.card div.ctr-information h4.title {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-family: serif;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+section.ctr-gallery div.ctr-cards div.card div.ctr-information p.description {
+  line-height: 1.3rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (width <= 1024px) {
+  section.ctr-gallery div.ctr-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width <= 664px) {
+  section.ctr-gallery div.ctr-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 443px) {
+  section.ctr-gallery div.ctr-cards div.card {
+    flex-direction: column;
+    height: auto;
+  }
+}
