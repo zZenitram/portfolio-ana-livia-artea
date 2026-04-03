@@ -12,24 +12,31 @@ section.ctr-home {
 }
 
 section.ctr-home div.ctr-banner {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50%;
   height: 100%;
+}
 
-  img.banner {
-    position: absolute;
-    height: 24rem;
-    width: 24rem;
-    border-radius: 100%;
-    object-fit: cover;
-  }
+.orbit-wrapper {
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+}
+
+section.ctr-home div.ctr-banner img.banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
 }
 
 section.ctr-home div.shadow-gradient {
   position: absolute;
+  inset: 0;
   background: linear-gradient(
     135deg,
     rgba(59, 130, 246, 0.2),
@@ -37,8 +44,8 @@ section.ctr-home div.shadow-gradient {
   );
   border-radius: 9999px;
   filter: blur(2rem);
-  height: 31rem;
-  width: 31rem;
+  transform: scale(1.3);
+  z-index: 1;
 }
 
 section.ctr-home div.ctr-introduction {
@@ -49,29 +56,30 @@ section.ctr-home div.ctr-introduction {
   row-gap: 30px;
   width: 50%;
   height: 100%;
+}
 
-  span.stats {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: hsl(var(--muted-foreground));
-  }
+section.ctr-home div.ctr-introduction span.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
 
-  h1.title {
-    font-size: 4rem;
-    letter-spacing: 0.05em;
-    font-family: Georgia, serif;
-  }
+section.ctr-home div.ctr-introduction h1.title {
+  font-size: 4rem;
+  letter-spacing: 0.05em;
+  font-family: Georgia, serif;
+}
 
-  p.description {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 400;
-    color: hsl(var(--muted-foreground));
-  }
+section.ctr-home div.ctr-introduction p.description {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: hsl(var(--muted-foreground));
 }
 
 section.ctr-home div.ctr-social {
@@ -80,25 +88,25 @@ section.ctr-home div.ctr-social {
   justify-content: start;
   gap: 1rem;
   flex-wrap: wrap;
+}
 
-  a.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.5rem;
-    font-weight: 500;
-    font-size: 0.875rem;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    text-decoration: none;
-    color: hsla(var(--muted));
-    background-color: hsl(var(--primary));
-  }
+section.ctr-home div.ctr-social a.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: hsla(var(--muted));
+  background-color: hsl(var(--primary));
+}
 
-  a.btn:hover {
-    color: hsla(var(--muted));
-    background-color: hsl(var(--primary), 0.9);
-  }
+section.ctr-home div.ctr-social a.btn:hover {
+  color: hsla(var(--muted));
+  background-color: hsl(var(--primary), 0.9);
 }
 
 @media (width <= 1024px) {
@@ -112,7 +120,6 @@ section.ctr-home div.ctr-social {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 100%;
   }
 
   section.ctr-home div.ctr-banner {
@@ -128,22 +135,9 @@ section.ctr-home div.ctr-social {
     margin-top: 130px;
   }
 
-  section.ctr-home div.ctr-banner {
+  .orbit-wrapper {
     width: 300px;
     height: 300px;
-
-    img.banner {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      border-radius: 100%;
-      object-fit: cover;
-    }
-  }
-
-  section.ctr-home div.shadow-gradient {
-    height: 100%;
-    width: 100%;
   }
 
   section.ctr-home div.ctr-introduction {
@@ -152,32 +146,22 @@ section.ctr-home div.ctr-social {
 }
 
 @media (width <= 443px) {
-  section.ctr-home {
-    height: auto;
-    padding: 2rem;
-    row-gap: 50px;
-  }
-
-  section.ctr-home div.ctr-banner {
+  .orbit-wrapper {
     width: 200px;
     height: 200px;
   }
 
-  section.ctr-home div.ctr-introduction {
-    p.description {
-      text-align: start;
-    }
-
-    span.stats {
-      flex-direction: column;
-      line-height: 1.5rem;
-      row-gap: 1rem;
-    }
+  section.ctr-home div.ctr-introduction p.description {
+    text-align: start;
   }
 
-  section.ctr-home div.ctr-social {
-    a.btn {
-      width: 100%;
-    }
+  section.ctr-home div.ctr-introduction span.stats {
+    flex-direction: column;
+    line-height: 1.5rem;
+    row-gap: 1rem;
+  }
+
+  section.ctr-home div.ctr-social a.btn {
+    width: 100%;
   }
 }

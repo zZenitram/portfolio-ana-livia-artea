@@ -90,44 +90,6 @@ section.ctr-gallery div.ctr-cards div.card.red {
   background-color: hsla(0, 65%, 89%);
 }
 
-section.ctr-gallery div.ctr-cards div.card.adidas::before {
-  background-image: url("../../../../public/svg/adidas.svg");
-}
-
-section.ctr-gallery div.ctr-cards div.card.cpfl::before {
-  background-image: url("../../../../public/svg/cpfl.svg");
-}
-
-section.ctr-gallery div.ctr-cards div.card.cpfl-solutions::before {
-  background-image: url("../../../../public/svg/cpfl-solucoes.svg");
-}
-
-section.ctr-gallery div.ctr-cards div.card.spic::before {
-  background-image: url("../../../../public/svg/spic.svg");
-}
-
-section.ctr-gallery div.ctr-cards div.card.fleury::before {
-  background-image: url("../../../../public/svg/fleury.svg");
-}
-
-section.ctr-gallery div.ctr-cards div.card::before {
-  content: "";
-  position: absolute;
-  inset: 1rem;
-  background-blend-mode: lighten;
-  background-repeat: no-repeat;
-  background-size: 160px;
-  background-position-x: 100%;
-  background-position-y: 100%;
-  opacity: 0.05;
-  z-index: 0;
-}
-
-section.ctr-gallery div.ctr-cards div.card > * {
-  position: relative;
-  z-index: 100;
-}
-
 section.ctr-gallery div.ctr-cards div.card div.icon-circle {
   height: 4rem;
   width: 4rem;
