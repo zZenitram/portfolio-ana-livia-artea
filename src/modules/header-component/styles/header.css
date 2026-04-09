@@ -34,7 +34,7 @@ header.ctr-header a:hover {
 header.ctr-header a.logotype {
   letter-spacing: 0.05em;
   font-family: Georgia, serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: hsl(var(--primary));
 }
 
