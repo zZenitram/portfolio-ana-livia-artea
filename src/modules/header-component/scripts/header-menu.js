@@ -17,7 +17,23 @@ export class HeaderMenu {
 
     handleLinkClick(event) {
         const link = event.target.closest("a.nav-link");
-        if (link) this.close();
+        if (!link) return;
+        
+        this.close();
+
+        // Verificar se o link aponta para uma seção na página atual
+        const url = new URL(link.href);
+        const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
+        const targetIsHome = url.pathname.endsWith('index.html') || url.pathname === '/' || url.pathname === '';
+
+        if (isHomePage && targetIsHome && url.hash) {
+            event.preventDefault();
+            const target = document.querySelector(url.hash);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                history.pushState(null, null, url.hash);
+            }
+        }
     }
 
     open() {
@@ -45,6 +61,31 @@ export class HeaderMenu {
         isHidden ? this.open() : this.close();
     }
 
+    setActiveLink() {
+        const links = this.menu.querySelectorAll("a.nav-link");
+        const currentPath = window.location.pathname;
+        const currentHash = window.location.hash;
+
+        links.forEach(link => {
+            const url = new URL(link.href);
+            // Verificar se o link corresponde à página atual
+            const linkPath = url.pathname;
+            const isSamePath = currentPath.endsWith(linkPath) || (currentPath === '/' && linkPath.endsWith('index.html'));
+            
+            if (isSamePath) {
+                // Se houver hash, verificar se corresponde
+                if (url.hash) {
+                    link.classList.toggle("active", currentHash === url.hash);
+                } else if (!currentHash) {
+                    // Se não houver hash no link nem na URL atual, é a página base
+                    link.classList.add("active");
+                }
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    }
+
     init() {
         if (!this.button || !this.menu || !this.body) return;
         this.createBackdrop();
@@ -53,10 +94,14 @@ export class HeaderMenu {
         this.button.addEventListener("click", this.handler);
         this.handleLinkClick = this.handleLinkClick.bind(this);
         this.menu.addEventListener("click", this.handleLinkClick);
+        
+        this.setActiveLink();
+        window.addEventListener("hashchange", () => this.setActiveLink());
     }
 
     destroy() {
         if (this.handler && this.button) this.button.removeEventListener("click", this.handler);
         if (this.backdrop) this.backdrop.remove();
+        window.removeEventListener("hashchange", () => this.setActiveLink());
     }
 }

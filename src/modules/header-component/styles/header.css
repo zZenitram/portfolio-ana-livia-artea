@@ -27,7 +27,8 @@ header.ctr-header a {
   transition: 0.2s ease;
 }
 
-header.ctr-header a:hover {
+header.ctr-header a:hover,
+header.ctr-header a.nav-link.active {
   color: hsl(var(--primary));
 }
 
