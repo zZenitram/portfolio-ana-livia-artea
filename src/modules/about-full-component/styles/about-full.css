@@ -22,7 +22,9 @@
   text-decoration: none;
   color: var(--foreground);
   font-weight: 500;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   width: fit-content;
 }
 
@@ -91,7 +93,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   z-index: 20;
   transition: all 0.3s ease;
   color: hsl(var(--primary));
@@ -149,7 +151,7 @@
 .polaroid {
   background: #fff;
   padding: 16px 16px 48px 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   position: relative;
   width: 240px;
   display: flex;
@@ -179,10 +181,18 @@
 }
 
 /* Polaroids slight rotation */
-.polaroid:nth-child(4n + 1) { transform: rotate(-3deg); }
-.polaroid:nth-child(4n + 2) { transform: rotate(2deg); }
-.polaroid:nth-child(4n + 3) { transform: rotate(-1deg); }
-.polaroid:nth-child(4n + 4) { transform: rotate(3deg); }
+.polaroid:nth-child(4n + 1) {
+  transform: rotate(-3deg);
+}
+.polaroid:nth-child(4n + 2) {
+  transform: rotate(2deg);
+}
+.polaroid:nth-child(4n + 3) {
+  transform: rotate(-1deg);
+}
+.polaroid:nth-child(4n + 4) {
+  transform: rotate(3deg);
+}
 
 .polaroid:hover {
   transform: scale(1.05) translateY(-10px);
@@ -204,7 +214,7 @@
 }
 
 .paperclip::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 5px;
   left: 2px;
@@ -264,7 +274,7 @@
   border-radius: 50px;
   font-weight: 500;
   color: #555;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -310,8 +320,8 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-  border: 1px solid rgba(0,0,0,0.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.02);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -319,7 +329,7 @@
 }
 
 .cert-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -332,7 +342,7 @@
 
 .cert-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border-color: hsla(var(--primary), 0.1);
 }
 
@@ -446,8 +456,8 @@
   padding: 20px;
   border-radius: 12px;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-  border: 1px solid rgba(0,0,0,0.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.03);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
@@ -467,7 +477,7 @@
 
 .tool-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   border-color: hsl(var(--primary));
   color: hsl(var(--primary));
 }
@@ -483,15 +493,23 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
+  .btn-back {
+    margin-inline: auto;
+  }
+
+  .ctr-intro .page-title {
+    text-align: center;
+  }
+
   .ctr-about-full {
     padding: 100px 16px 40px;
   }
-  
+
   .tools-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .cert-grid {
     grid-template-columns: 1fr;
     gap: 16px;

@@ -57,6 +57,7 @@ section.ctr-contact-me h3.title {
   letter-spacing: 0.05em;
   font-family: serif;
   color: hsla(var(--muted));
+  text-align: center;
 }
 
 section.ctr-contact-me span.sub-title {
