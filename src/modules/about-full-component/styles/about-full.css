@@ -164,6 +164,8 @@
   height: 200px;
   object-fit: cover;
   background-color: #eee;
+  image-rendering: -webkit-optimize-contrast; /* Melhora a nitidez em navegadores baseados em Chromium */
+  display: block;
 }
 
 .polaroid .caption {
