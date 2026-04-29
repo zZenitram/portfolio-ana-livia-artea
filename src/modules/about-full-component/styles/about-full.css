@@ -12,7 +12,7 @@
 .ctr-intro {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 5px;
 }
 
 .btn-back {
@@ -66,11 +66,10 @@
   align-items: center;
   gap: 50px;
   width: 100%;
-  padding: 50px 0;
+  padding: 35px 0;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding-bottom: 40px; /* space for rotation */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
