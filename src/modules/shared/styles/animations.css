@@ -1,0 +1,51 @@
+/* src/modules/shared/styles/animations.css */
+
+/* Hidden state for elements to be revealed */
+.reveal {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  will-change: opacity, transform;
+}
+
+/* Base active state */
+.reveal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Animations */
+.fade-up {
+  transform: translateY(40px);
+}
+
+.fade-down {
+  transform: translateY(-40px);
+}
+
+.fade-left {
+  transform: translateX(40px);
+}
+
+.fade-right {
+  transform: translateX(-40px);
+}
+
+.zoom-in {
+  transform: scale(0.9);
+}
+
+.zoom-out {
+  transform: scale(1.1);
+}
+
+/* Delays for staggering */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+.delay-800 { transition-delay: 800ms; }
