@@ -67,7 +67,7 @@ class AdidasComponent extends HTMLElement {
 
                     if (isVideo) {
                         return `
-                            <a class="image-card video-card" href="${data.url}" target="_blank">
+                            <div class="image-card video-card">
                                 <div class="video-container">
                                     <video src="${data.url}" class="video-bg" autoplay loop muted playsinline></video>
                                     <video src="${data.url}" class="video-fg" autoplay loop muted playsinline></video>
@@ -75,7 +75,7 @@ class AdidasComponent extends HTMLElement {
                                 <span class="media-badge video-badge">
                                     <i data-lucide="play" width="12" height="12"></i>
                                 </span>
-                            </a>
+                            </div>
                         `;
                     } else if (isGif) {
                         return `
