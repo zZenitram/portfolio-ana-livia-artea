@@ -79,16 +79,16 @@ class AdidasComponent extends HTMLElement {
                         `;
                     } else if (isGif) {
                         return `
-                            <a class="image-card gif-card" href="${data.url}" target="_blank">
+                            <div class="image-card gif-card">
                                 <img src="${data.url}" alt="${data.name}" class="grid-image" />
                                 <span class="media-badge gif-badge">GIF</span>
-                            </a>
+                            </div>
                         `;
                     } else {
                         return `
-                            <a class="image-card" href="${data.url}" target="_blank">
+                            <div class="image-card">
                                 <img src="${data.url}" alt="${data.name}" class="grid-image" />
-                            </a>
+                            </div>
                         `;
                     }
                 } else {
