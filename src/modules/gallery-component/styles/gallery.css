@@ -46,6 +46,11 @@ section.ctr-gallery div.ctr-cards {
   width: 100%;
 }
 
+section.ctr-gallery div.ctr-cards a {
+  text-decoration: none;
+  color: #000000;
+}
+
 section.ctr-gallery div.ctr-cards div.card {
   position: relative;
   display: flex;
