@@ -210,3 +210,11 @@ body.overflow-hidden {
   scrollbar-width: thin; /* fino */
   scrollbar-color: hsl(var(--primary)) transparent;
 }
+
+strong {
+  font-weight: bold;
+}
+
+italic {
+  font-style: italic;
+}
