@@ -19,6 +19,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 25px;
   text-decoration: none;
   color: var(--foreground);
   font-weight: 500;
