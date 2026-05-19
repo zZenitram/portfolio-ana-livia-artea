@@ -3,13 +3,19 @@
 
     <url>
         <loc>https://www.analiviaartea.com.br/</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>2026-05-19</lastmod>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://www.analiviaartea.com.br/sobre-mim.html</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>2026-05-19</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.analiviaartea.com.br/adidas-branding.html</loc>
+        <lastmod>2026-05-19</lastmod>
         <priority>0.8</priority>
     </url>
 
