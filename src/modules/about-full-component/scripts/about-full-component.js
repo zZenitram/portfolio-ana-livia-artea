@@ -17,7 +17,98 @@ class AboutFullComponent extends HTMLElement {
             }
             this.initAnimations();
             this.initCarousel();
+            this.initCertificates();
         });
+    }
+
+    initCertificates() {
+        const grid = this.querySelector('.cert-grid');
+        if (!grid) return;
+
+        const certificateData = [
+            {
+                name: "SEO na Era da Inteligência Artificial",
+                description: "Conversion",
+                url: "https://drive.google.com/file/d/1gIXLAWonFXzfwrrX_WnlcwPr41rU7yH5/view",
+                icon: "search"
+            },
+            {
+                name: "Next SEO",
+                description: "Conversion",
+                url: "https://drive.google.com/file/d/1q9H7CE7aYcOwK2JoH0-Hp0r2nJVjP5lf/view",
+                icon: "trending-up"
+            },
+            {
+                name: "Design Centrado no Usuário",
+                description: "PUCRS",
+                url: "https://drive.google.com/file/d/1PiJSqJ_KuNI4zkxgid89ddHI7vdY-lt7/view",
+                icon: "mouse-pointer-2"
+            },
+            {
+                name: "Escrita Criativa",
+                description: "PUCRS",
+                url: "https://drive.google.com/file/d/1lsNeip3Il-8uh6aSXYM4Sw5pbEYFLGpQ/view",
+                icon: "feather"
+            },
+            {
+                name: "(R)evolução do Branding",
+                description: "Ana Couto/Laje",
+                url: "https://drive.google.com/file/d/1K0rdw2-Zhzn7gL-fssZx_DlMDIFudRan/view",
+                icon: "award"
+            },
+            {
+                name: "Branding Essencial",
+                description: "Ana Couto/Laje",
+                url: "https://drive.google.com/file/d/1_mBA2Q3xEFBaa1UIx06yTz5FLYMgxOGN/view?usp=sharing",
+                icon: "sparkles"
+            },
+            {
+                name: "Formação em Liderança",
+                description: "Escola Conquer",
+                url: "https://drive.google.com/file/d/1EvVW3P4jLAWyIUpNpENygURoJ1rYc9Mg/view",
+                icon: "users-2"
+            },
+            {
+                name: "Produtividade e Performance",
+                description: "Escola Conquer",
+                url: "https://drive.google.com/file/d/1dqWWyioIfBXnZfod1zggy9Im_DfuatZ1/view?usp=sharing",
+                icon: "zap"
+            },
+            {
+                name: "Fundamentos de SEO",
+                description: "LinkedIn Learning",
+                url: "https://drive.google.com/file/d/15B31VPLxROwY7t9DIVaexhCGM0msUhee/view?usp=sharing",
+                icon: "search"
+            }
+        ];
+
+        grid.innerHTML = certificateData.map(data => `
+            <a class="cert-card" href="${data.url}" target="_blank">
+                <div class="cert-icon">
+                    <i data-lucide="${data.icon}" width="24" height="24"></i>
+                </div>
+                <div class="cert-info">
+                    <strong>${data.name}</strong>
+                    <span>${data.description}</span>
+                </div>
+            </a>
+        `).join('');
+
+        if (window.lucide) {
+            window.lucide.createIcons({
+                attrs: {
+                    class: 'lucide'
+                },
+                nameAttr: 'data-lucide',
+                node: grid
+            });
+        }
+
+        const certCards = grid.querySelectorAll('.cert-card');
+        this.certificates = certificateData.map((data, index) => ({
+            ...data,
+            element: certCards[index]
+        }));
     }
 
     initAnimations() {
@@ -39,7 +130,7 @@ class AboutFullComponent extends HTMLElement {
         const prevBtn = this.querySelector('.carousel-btn.prev');
         const nextBtn = this.querySelector('.carousel-btn.next');
         const indicators = this.querySelector('.carousel-indicators');
-        
+
         if (!gallery || !wrapper || !indicators) return;
 
         const originalPolaroids = Array.from(this.querySelectorAll('.polaroid:not(.clone)'));
@@ -52,7 +143,7 @@ class AboutFullComponent extends HTMLElement {
 
         const updateActiveDot = () => {
             if (dots.length === 0) return;
-            
+
             let index = 0;
             // Se chegou no final (com tolerância de 10px), ativa o último dot
             if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
@@ -60,7 +151,7 @@ class AboutFullComponent extends HTMLElement {
             } else {
                 index = Math.round(gallery.scrollLeft / scrollAmount);
             }
-            
+
             dots.forEach(dot => dot.classList.remove('active'));
             if (dots[index]) dots[index].classList.add('active');
         };
@@ -69,24 +160,24 @@ class AboutFullComponent extends HTMLElement {
             indicators.innerHTML = '';
             dots = [];
             const maxScroll = gallery.scrollWidth - gallery.clientWidth;
-            
+
             // Se não houver scroll, não cria dots
             if (maxScroll <= 0) return;
 
             // Calcula o número de paradas possíveis
             const numDots = Math.ceil(maxScroll / scrollAmount) + 1;
-            
+
             for (let i = 0; i < numDots; i++) {
                 const dot = document.createElement('div');
                 dot.classList.add('carousel-dot');
-                
+
                 dot.addEventListener('click', () => {
                     gallery.style.scrollBehavior = 'smooth';
                     let targetScroll = i * scrollAmount;
                     if (i === numDots - 1) targetScroll = maxScroll;
                     gallery.scrollTo({ left: targetScroll });
                 });
-                
+
                 indicators.appendChild(dot);
                 dots.push(dot);
             }
@@ -114,7 +205,7 @@ class AboutFullComponent extends HTMLElement {
         prevBtn?.addEventListener('click', () => {
             scrollPrev();
         });
-        
+
         nextBtn?.addEventListener('click', () => {
             scrollNext();
         });
@@ -123,7 +214,7 @@ class AboutFullComponent extends HTMLElement {
         const checkControlsVisibility = () => {
             requestAnimationFrame(() => {
                 createDots(); // Recria os dots com a largura correta
-                
+
                 // A tolerância de 10px ajuda a evitar que borders ou paddings pequenos ativem os botões
                 if (gallery.scrollWidth <= gallery.clientWidth + 10) {
                     if (prevBtn) prevBtn.style.display = 'none';

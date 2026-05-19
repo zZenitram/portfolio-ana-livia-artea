@@ -313,6 +313,7 @@
 }
 
 .cert-card {
+  text-decoration: none;
   background: white;
   border-radius: 12px;
   padding: 24px;
