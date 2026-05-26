@@ -17,6 +17,7 @@ class AdidasComponent extends HTMLElement {
             }
             this.initImages();
             this.initAnimations();
+            this.initLoaders();
         });
     }
 
@@ -67,7 +68,7 @@ class AdidasComponent extends HTMLElement {
 
                     if (isVideo) {
                         return `
-                            <div class="image-card video-card">
+                            <div class="image-card video-card media-card skeleton-loading" style="cursor: pointer;" data-media-url="${data.url}" data-media-type="video">
                                 <div class="video-container">
                                     <video src="${data.url}" class="video-bg" autoplay loop muted playsinline></video>
                                     <video src="${data.url}" class="video-fg" autoplay loop muted playsinline></video>
@@ -79,14 +80,14 @@ class AdidasComponent extends HTMLElement {
                         `;
                     } else if (isGif) {
                         return `
-                            <div class="image-card gif-card">
+                            <div class="image-card gif-card media-card skeleton-loading" style="cursor: pointer;" data-media-url="${data.url}" data-media-type="image">
                                 <img src="${data.url}" alt="${data.name}" class="grid-image" />
                                 <span class="media-badge gif-badge">GIF</span>
                             </div>
                         `;
                     } else {
                         return `
-                            <div class="image-card">
+                            <div class="image-card media-card skeleton-loading" style="cursor: pointer;" data-media-url="${data.url}" data-media-type="image">
                                 <img src="${data.url}" alt="${data.name}" class="grid-image" />
                             </div>
                         `;
@@ -133,6 +134,40 @@ class AdidasComponent extends HTMLElement {
         }, { threshold: 0.1 });
 
         this.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    initLoaders() {
+        const mediaElements = Array.from(this.querySelectorAll('img.grid-image, video.video-bg'));
+        const cards = this.querySelectorAll('.skeleton-loading');
+
+        if (mediaElements.length === 0) {
+            cards.forEach(card => card.classList.remove('skeleton-loading'));
+            return;
+        }
+
+        const promises = mediaElements.map(media => {
+            return new Promise((resolve) => {
+                if (media.tagName.toLowerCase() === 'img') {
+                    if (media.complete) {
+                        resolve();
+                    } else {
+                        media.addEventListener('load', resolve, { once: true });
+                        media.addEventListener('error', resolve, { once: true });
+                    }
+                } else if (media.tagName.toLowerCase() === 'video') {
+                    if (media.readyState >= 3) {
+                        resolve();
+                    } else {
+                        media.addEventListener('canplay', resolve, { once: true });
+                        media.addEventListener('error', resolve, { once: true });
+                    }
+                }
+            });
+        });
+
+        Promise.all(promises).then(() => {
+            cards.forEach(card => card.classList.remove('skeleton-loading'));
+        });
     }
 
     async loadTemplate() {
