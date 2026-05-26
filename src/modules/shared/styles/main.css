@@ -218,3 +218,87 @@ strong {
 italic {
   font-style: italic;
 }
+
+/* Media Modal */
+.media-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.media-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.media-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.media-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(0);
+}
+
+.media-modal-player {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: transparent;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.media-modal-close {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.media-modal-close:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .media-modal-close {
+    top: -40px;
+    right: 0px;
+  }
+}
