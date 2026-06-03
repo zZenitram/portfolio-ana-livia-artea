@@ -6,6 +6,9 @@ export class HeaderMenu {
 
         this.handler = null;
         this.backdrop = null;
+        this.observer = null;
+        this.scrollSpyInterval = null;
+        this.scrollSpyHandler = null;
     }
 
     createBackdrop() {
@@ -95,11 +98,96 @@ export class HeaderMenu {
         
         this.setActiveLink();
         window.addEventListener("hashchange", () => this.setActiveLink());
+
+        this.initScrollSpy();
+    }
+
+    initScrollSpy() {
+        const links = this.menu.querySelectorAll("a.nav-link");
+        const hashes = [];
+        links.forEach(link => {
+            const url = new URL(link.href);
+            if (url.hash) {
+                hashes.push(url.hash);
+            }
+        });
+
+        if (hashes.length === 0) return;
+
+        let attempts = 0;
+        const maxAttempts = 40;
+        this.scrollSpyInterval = setInterval(() => {
+            const sections = [];
+            hashes.forEach(hash => {
+                const target = document.querySelector(hash);
+                if (target && target.getBoundingClientRect().height > 0) {
+                    sections.push({ hash, element: target });
+                }
+            });
+
+            const expectedCount = hashes.filter(hash => document.querySelector(hash)).length;
+            if ((sections.length > 0 && sections.length === expectedCount) || attempts >= maxAttempts) {
+                clearInterval(this.scrollSpyInterval);
+                this.setupScrollSpy(sections);
+            }
+            attempts++;
+        }, 100);
+    }
+
+    setupScrollSpy(sections) {
+        if (sections.length === 0) return;
+
+        this.scrollSpyHandler = () => {
+            const scrollPos = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            
+            // Detecta se atingiu o fim da página (com margem de 50px de segurança)
+            const isAtBottom = scrollPos + windowHeight >= docHeight - 50;
+
+            let activeHash = null;
+
+            if (isAtBottom) {
+                activeHash = sections[sections.length - 1].hash;
+            } else {
+                // Linha de ativação a 35% do topo do viewport
+                const activationLine = scrollPos + (windowHeight * 0.35);
+
+                for (let i = 0; i < sections.length; i++) {
+                    const section = sections[i].element;
+                    const top = section.offsetTop;
+                    const height = section.offsetHeight;
+
+                    if (activationLine >= top && activationLine < top + height) {
+                        activeHash = sections[i].hash;
+                        break;
+                    }
+                }
+            }
+
+            // Atualiza a classe active para cada link correspondente ao hash ativo
+            this.menu.querySelectorAll("a.nav-link").forEach(link => {
+                const url = new URL(link.href);
+                if (url.hash) {
+                    if (url.hash === activeHash) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                }
+            });
+        };
+
+        window.addEventListener("scroll", this.scrollSpyHandler);
+        // Roda uma vez para definir o estado inicial correto
+        this.scrollSpyHandler();
     }
 
     destroy() {
         if (this.handler && this.button) this.button.removeEventListener("click", this.handler);
         if (this.backdrop) this.backdrop.remove();
         window.removeEventListener("hashchange", () => this.setActiveLink());
+        if (this.scrollSpyInterval) clearInterval(this.scrollSpyInterval);
+        if (this.scrollSpyHandler) window.removeEventListener("scroll", this.scrollSpyHandler);
     }
 }
