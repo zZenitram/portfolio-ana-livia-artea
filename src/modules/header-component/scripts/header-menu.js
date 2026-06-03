@@ -23,13 +23,11 @@ export class HeaderMenu {
 
         // Verificar se o link aponta para uma seção na página atual
         const url = new URL(link.href);
-        const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
-        const targetIsHome = url.pathname.endsWith('index.html') || url.pathname === '/' || url.pathname === '';
 
-        if (isHomePage && targetIsHome && url.hash) {
-            event.preventDefault();
+        if (url.hash) {
             const target = document.querySelector(url.hash);
             if (target) {
+                event.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
                 history.pushState(null, null, url.hash);
             }
