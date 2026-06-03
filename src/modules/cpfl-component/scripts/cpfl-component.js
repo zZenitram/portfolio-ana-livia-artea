@@ -33,7 +33,7 @@ class CpflComponent extends HTMLElement {
                 { name: "Post A Vida de Eletricista", url: "public/jpg/a_vida_do_eletricista.jpg" },
                 { name: "Post Engajamento Dia a Dia do Time", url: "public/jpg/ha_quantos_meses.jpg" },
                 { name: "Miniaturas Escola de Eletricistas CPFL", url: "public/jpg/energia_eletricistas.jpg" },
-                { name: "Post Temático Luzes de Natal", url: "public/jpg/stranger_things_foto.jpg" }
+                { name: "Post Temático Stranger Things", url: "public/mp4/stranger_things_video.mp4", type: "video" }
             ],
             "employer-branding-grid": [
                 { name: "Divulgação de Vagas CPFL Energia", url: "public/png/vagas.png" },
