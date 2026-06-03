@@ -14,8 +14,14 @@
     </url>
 
     <url>
-        <loc>https://www.analiviaartea.com.br/adidas-branding.html</loc>
-        <lastmod>2026-05-19</lastmod>
+        <loc>https://www.analiviaartea.com.br/adidas.html</loc>
+        <lastmod>2026-06-03</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.analiviaartea.com.br/cpfl-energia.html</loc>
+        <lastmod>2026-06-03</lastmod>
         <priority>0.8</priority>
     </url>
 
