@@ -13,4 +13,5 @@ import '../../article-component/scripts/article-component.js';
 import '../../expertise-component/scripts/expertise-component.js';
 import '../../footer-component/scripts/footer-component.js';
 import '../../adidas-component/scripts/adidas-component.js';
+import '../../cpfl-component/scripts/cpfl-component.js';
 import '../../media-modal-component/scripts/media-modal-component.js';

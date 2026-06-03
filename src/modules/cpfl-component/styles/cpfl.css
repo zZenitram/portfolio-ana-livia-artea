@@ -1,4 +1,4 @@
-.ctr-adidas-branding {
+.ctr-cpfl-branding {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -119,16 +119,18 @@
   margin-top: 16px;
 }
 
+.image-grid.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin-inline: auto;
+}
+
 .image-grid.grid-3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
 .image-grid.grid-4 {
   grid-template-columns: repeat(4, 1fr);
-}
-
-.image-grid.grid-5 {
-  grid-template-columns: repeat(5, 1fr);
 }
 
 .image-placeholder {
@@ -140,18 +142,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
   color: hsl(var(--muted-foreground));
   opacity: 0.6;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  padding: 16px;
+  text-align: center;
 }
 
 .image-placeholder .image-name {
   font-size: 0.85rem;
   font-weight: 500;
   color: hsl(var(--muted-foreground));
+  line-height: 1.3;
 }
 
 .image-placeholder i {
@@ -283,39 +288,46 @@
   background: #333;
 }
 
-/* Black Friday & Hoje Specific Grid Ratio */
-#bf-grid .image-card,
-#bf-grid .image-placeholder,
-#hoje-grid .image-card,
-#hoje-grid .image-placeholder {
-  aspect-ratio: 1 / 1;
+/* Row 1 & 2: Social Media Strategy Grids - Portrait / 4:5 */
+#solucao-grid-1 .image-card,
+#solucao-grid-1 .image-placeholder,
+#solucao-grid-2 .image-card,
+#solucao-grid-2 .image-placeholder {
+  aspect-ratio: 4 / 5;
 }
 
-/* Dropset Grid (Vertical Image Proportions) */
-#dropset-grid {
-  align-items: stretch;
-}
-
-#dropset-grid .image-card,
-#dropset-grid .image-placeholder {
+/* Row 3: Employer Branding - Vertical / Portrait */
+#employer-branding-grid .image-card,
+#employer-branding-grid .image-placeholder {
   aspect-ratio: 10 / 14;
 }
 
-#dropset-grid .image-card img.grid-image {
+/* Row 4: Pinterest Pins - Square */
+#pinterest-grid .image-card,
+#pinterest-grid .image-placeholder {
+  aspect-ratio: 1 / 1;
+}
+
+/* Row 5: Influencers Videos - Tall Vertical */
+#influenciadores-grid .image-card,
+#influenciadores-grid .image-placeholder {
+  aspect-ratio: 10 / 14;
+}
+
+#influenciadores-grid .image-card img.grid-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 @media (max-width: 900px) {
-  .image-grid.grid-4,
-  .image-grid.grid-5 {
+  .image-grid.grid-4 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .ctr-adidas-branding {
+  .ctr-cpfl-branding {
     padding: 100px 16px 40px;
     gap: 60px;
   }
@@ -333,18 +345,21 @@
     text-align: center;
   }
 
+  .image-grid.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .image-grid.grid-3,
-  .image-grid.grid-4,
-  .image-grid.grid-5 {
+  .image-grid.grid-4 {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
 
 @media (max-width: 480px) {
+  .image-grid.grid-2,
   .image-grid.grid-3,
-  .image-grid.grid-4,
-  .image-grid.grid-5 {
+  .image-grid.grid-4 {
     grid-template-columns: 1fr;
   }
 }
@@ -364,14 +379,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
   animation: shimmer 1.5s infinite;
   z-index: 10;
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .skeleton-loading img,
@@ -379,4 +403,34 @@
 .skeleton-loading .media-badge {
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.influencer-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.influencer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: hsl(var(--primary));
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.influencer-link:hover {
+  opacity: 0.7;
+}
+
+.influencer-link i {
+  display: inline-block;
+  vertical-align: middle;
 }
