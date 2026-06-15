@@ -36,6 +36,10 @@
       (function() {
         const savedTheme = localStorage.getItem('portfolio-theme') || 'light-mode';
         document.body.classList.add(savedTheme);
+        const savedLang = localStorage.getItem('portfolio-lang') || 'pt';
+        if (savedLang !== 'pt') {
+          document.documentElement.classList.add('i18n-loading');
+        }
       })();
     </script>
     <!-- (Portfolio) Header -->

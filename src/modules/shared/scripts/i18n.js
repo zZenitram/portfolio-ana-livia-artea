@@ -35,6 +35,9 @@ class I18nManager {
 
                 // Start observing for dynamically added elements
                 this.startObserver();
+
+                // Remove loading class to reveal page
+                document.documentElement.classList.remove('i18n-loading');
             })();
         }
         return this.initPromise;

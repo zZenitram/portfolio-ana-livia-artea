@@ -302,3 +302,10 @@ italic {
     right: 0px;
   }
 }
+
+/* i18n Loading state to prevent FOUC (Flash of Unstyled/Untranslated Content) */
+html.i18n-loading body {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
