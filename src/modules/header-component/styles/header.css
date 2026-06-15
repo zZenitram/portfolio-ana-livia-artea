@@ -20,6 +20,9 @@ header.ctr-header.shadow {
 }
 
 header.ctr-header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.875rem;
@@ -37,6 +40,41 @@ header.ctr-header a.logotype {
   font-family: Georgia, serif;
   font-size: 1.2rem;
   color: hsl(var(--primary));
+}
+
+header.ctr-header button#theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid hsla(var(--primary), 0.15);
+  background-color: transparent;
+  color: hsl(var(--muted-foreground));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  outline: none;
+}
+
+header.ctr-header button#theme i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+header.ctr-header button#theme:hover {
+  background-color: hsla(var(--primary), 0.08);
+  color: hsl(var(--primary));
+  border-color: hsla(var(--primary), 0.3);
+  transform: scale(1.05);
+}
+
+header.ctr-header button#theme:active {
+  transform: scale(0.95);
 }
 
 header.ctr-header div.ctr-navigation {
@@ -62,6 +100,7 @@ header.ctr-header nav.ctr-nav button.btn {
 
 header.ctr-header nav.ctr-nav #menu {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -80,6 +119,7 @@ header.ctr-header nav.ctr-nav #menu {
     left: 0;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
     background: hsl(var(--background));
     border-radius: 0 0 0.5rem 0.5rem;
@@ -100,5 +140,9 @@ header.ctr-header nav.ctr-nav #menu {
     align-items: center;
     height: 3rem;
     padding: 0 1.5rem;
+  }
+
+  header.ctr-header button#theme {
+    margin: 0.75rem 1.5rem;
   }
 }
