@@ -20,6 +20,12 @@
   </head>
 
   <body>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'light-mode';
+        document.body.classList.add(savedTheme);
+      })();
+    </script>
     <main class="ctr-main">
       <section class="ctr-section">
         <h1 class="title">Oops! Página não encontrada</h1>
