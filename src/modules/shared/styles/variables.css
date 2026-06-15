@@ -20,3 +20,202 @@
   --ring-offset-shadow: 0 0 #0000;
   --ring-shadow: 0 0 #0000;
 }
+
+/* Light Theme Variables */
+body.light-mode {
+  --background: 40, 33%, 97%;
+  --foreground: 20, 10%, 15%;
+  --card: 40, 30%, 99%;
+  --card-foreground: 20, 10%, 15%;
+  --popover: 40, 30%, 99%;
+  --popover-foreground: 20, 10%, 15%;
+  --primary: 335, 53%, 37%;
+  --primary-foreground: 40, 33%, 97%;
+  --secondary: 35, 30%, 92%;
+  --secondary-foreground: 20, 10%, 25%;
+  --muted: 35, 20%, 94%;
+  --muted-foreground: 20, 10%, 45%;
+  --accent: 38, 70%, 50%;
+  --accent-foreground: 20, 10%, 15%;
+  --shadow-soft: 0 4px 20px -4px hsl(20 10% 15% / 0.08);
+  --shadow-elevated: 0 12px 40px -8px hsl(20 10% 15% / 0.12);
+}
+
+/* Dark Theme Variables */
+body.dark-mode {
+  --background: 20, 10%, 10%;
+  --foreground: 40, 20%, 95%;
+  --card: 20, 10%, 14%;
+  --card-foreground: 40, 20%, 95%;
+  --popover: 20, 10%, 14%;
+  --popover-foreground: 40, 20%, 95%;
+  --primary: 335, 60%, 45%; /* Mantém o tom do rosa marcante e escuro para destacar no fundo escuro */
+  --primary-foreground: 40, 33%, 97%; /* Texto branco/claro para alto contraste sobre o rosa */
+  --secondary: 20, 10%, 18%;
+  --secondary-foreground: 40, 15%, 85%;
+  --muted: 20, 10%, 16%;
+  --muted-foreground: 20, 10%, 65%;
+  --accent: 38, 80%, 60%;
+  --accent-foreground: 20, 10%, 10%;
+  --shadow-soft: 0 4px 20px -4px hsl(20 10% 2% / 0.3);
+  --shadow-elevated: 0 12px 40px -8px hsl(20 10% 2% / 0.5);
+}
+
+/* Smooth Transition for Theme Toggling */
+body {
+  color: hsl(var(--foreground));
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body *, 
+body *::before, 
+body *::after {
+  /* Only transition background, colors and border colors to prevent performance bottlenecks */
+  transition-property: background-color, color, border-color, fill, stroke, box-shadow;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Specific Dark Mode Overrides for Hardcoded Properties */
+body.dark-mode {
+  color: hsl(var(--foreground));
+}
+
+body.dark-mode span.sub-title {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+
+/* Override hardcoded dark text in case studies, about page and tags */
+body.dark-mode .section-content,
+body.dark-mode .intro-box p a,
+body.dark-mode .image-caption,
+body.dark-mode .cert-info strong,
+body.dark-mode .tool-card,
+body.dark-mode .inspiration-tags .tag {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Override hardcoded light backgrounds, add visible borders and stronger shadows in dark mode */
+body.dark-mode .tool-card,
+body.dark-mode .cert-card,
+body.dark-mode .inspiration-tags .tag,
+body.dark-mode .image-card,
+body.dark-mode .image-placeholder,
+body.dark-mode section.ctr-about-me div.ctr-cards div.card,
+body.dark-mode section.ctr-services div.ctr-cards div.card,
+body.dark-mode section.ctr-article div.ctr-cards div.card,
+body.dark-mode section.ctr-expertise div.ctr-cards div.card {
+  background-color: hsl(var(--card)) !important;
+  border: 1px solid hsla(var(--primary), 0.2) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .image-caption {
+  background-color: hsl(var(--card)) !important;
+  border-top: 1px solid hsla(var(--primary), 0.15) !important;
+}
+
+/* Ensure hover borders stay visible and highlight with primary color */
+body.dark-mode .inspiration-tags .tag:hover,
+body.dark-mode .tool-card:hover,
+body.dark-mode .cert-card:hover,
+body.dark-mode section.ctr-about-me div.ctr-cards div.card:hover,
+body.dark-mode section.ctr-services div.ctr-cards div.card:hover,
+body.dark-mode section.ctr-article div.ctr-cards div.card:hover,
+body.dark-mode section.ctr-expertise div.ctr-cards div.card:hover {
+  border-color: hsl(var(--primary)) !important;
+}
+
+/* Ensure high contrast white/light text inside elements with primary (pink) background in dark mode */
+body.dark-mode .maroon-box,
+body.dark-mode .maroon-box *,
+body.dark-mode section.ctr-contact-me h3.title,
+body.dark-mode section.ctr-contact-me span.sub-title,
+body.dark-mode section.ctr-contact-me a.btn {
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+body.dark-mode section.ctr-home a.btn,
+body.dark-mode section.ctr-about-me a.btn,
+body.dark-mode section.ctr-brands a.btn,
+body.dark-mode section.ctr-article a.btn,
+body.dark-mode section.ctr-contact-me a.btn {
+  color: hsl(var(--primary-foreground)) !important;
+  background-color: hsl(var(--primary)) !important;
+}
+
+/* Adjust content links on hover in dark mode (prevent generic blue) */
+body.dark-mode .intro-box p a:hover,
+body.dark-mode .section-content p a:hover {
+  color: hsl(var(--primary)) !important;
+}
+
+body.dark-mode .media-badge:not(.video-badge) {
+  background: hsl(var(--secondary)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Gallery Cards Dark Mode overrides: Darker backgrounds with high contrast light texts */
+body.dark-mode section.ctr-gallery div.ctr-cards a {
+  color: hsl(var(--foreground)) !important;
+}
+
+body.dark-mode section.ctr-gallery div.ctr-cards div.card div.ctr-information p.description {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+body.dark-mode section.ctr-gallery div.ctr-cards div.card.gray {
+  background-color: hsla(0, 0%, 15%, 0.6) !important;
+  border-color: hsla(0, 0%, 25%, 0.5) !important;
+}
+
+body.dark-mode section.ctr-gallery div.ctr-cards div.card.green {
+  background-color: hsla(142, 35%, 15%, 0.6) !important;
+  border-color: hsla(142, 40%, 30%, 0.5) !important;
+}
+
+body.dark-mode section.ctr-gallery div.ctr-cards div.card.orange {
+  background-color: hsla(37, 35%, 15%, 0.6) !important;
+  border-color: hsla(37, 40%, 30%, 0.5) !important;
+}
+
+body.dark-mode section.ctr-gallery div.ctr-cards div.card.blue {
+  background-color: hsla(203, 35%, 15%, 0.6) !important;
+  border-color: hsla(203, 40%, 30%, 0.5) !important;
+}
+
+body.dark-mode section.ctr-gallery div.ctr-cards div.card.red {
+  background-color: hsla(0, 35%, 15%, 0.6) !important;
+  border-color: hsla(0, 40%, 30%, 0.5) !important;
+}
+
+/* Served companies logos in dark mode: Flat white with hover opacity */
+body.dark-mode section.ctr-brands ul li img {
+  filter: brightness(0) invert(1) opacity(0.5) !important;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode section.ctr-brands ul li img:hover {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: scale(1.08);
+}
+
+/* Tools logos in dark mode: Flat white, restoring colored logos on hover */
+body.dark-mode .tool-card img {
+  filter: brightness(0) invert(1) opacity(0.5) !important;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .tool-card:hover img {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+/* Hide the main profile image shadow-gradient in dark mode */
+body.dark-mode section.ctr-home div.shadow-gradient {
+  display: none !important;
+}

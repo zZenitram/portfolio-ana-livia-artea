@@ -128,7 +128,7 @@ section.ctr-gallery div.ctr-cards div.card div.ctr-information h4.title {
 section.ctr-gallery div.ctr-cards div.card div.ctr-information p.description {
   line-height: 1.3rem;
   font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+  color: rgba(0, 0, 0, 0.7);
 }
 
 @media (width <= 1024px) {
