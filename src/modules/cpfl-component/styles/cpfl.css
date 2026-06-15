@@ -337,6 +337,7 @@
   }
 
   .ctr-intro .page-title {
+    flex-direction: column;
     justify-content: center;
   }
 
@@ -368,7 +369,7 @@
 .skeleton-loading {
   position: relative;
   overflow: hidden;
-  background: #e0e0e0;
+  background: hsl(var(--muted));
   pointer-events: none;
 }
 
@@ -382,7 +383,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.15),
     transparent
   );
   animation: shimmer 1.5s infinite;
