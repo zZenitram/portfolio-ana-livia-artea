@@ -16,10 +16,10 @@ function applyTheme(theme) {
 }
 
 function updateThemeIcon(theme) {
-    const icon = document.querySelector('#theme i');
-    if (icon && window.lucide) {
+    const button = document.querySelector('#theme');
+    if (button && window.lucide) {
         const iconName = theme === 'dark-mode' ? 'moon' : 'sun';
-        icon.setAttribute('data-lucide', iconName);
+        button.innerHTML = `<i data-lucide="${iconName}" width="16" height="16"></i>`;
         window.lucide.createIcons();
     }
 }

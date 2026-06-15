@@ -49,8 +49,10 @@ body.dark-mode {
   --card-foreground: 40, 20%, 95%;
   --popover: 20, 10%, 14%;
   --popover-foreground: 40, 20%, 95%;
-  --primary: 335, 60%, 45%; /* Mantém o tom do rosa marcante e escuro para destacar no fundo escuro */
-  --primary-foreground: 40, 33%, 97%; /* Texto branco/claro para alto contraste sobre o rosa */
+  --primary:
+    335, 60%, 45%; /* Mantém o tom do rosa marcante e escuro para destacar no fundo escuro */
+  --primary-foreground:
+    40, 33%, 97%; /* Texto branco/claro para alto contraste sobre o rosa */
   --secondary: 20, 10%, 18%;
   --secondary-foreground: 40, 15%, 85%;
   --muted: 20, 10%, 16%;
@@ -64,15 +66,17 @@ body.dark-mode {
 /* Smooth Transition for Theme Toggling */
 body {
   color: hsl(var(--foreground));
-  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-              color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body *, 
-body *::before, 
+body *,
+body *::before,
 body *::after {
   /* Only transition background, colors and border colors to prevent performance bottlenecks */
-  transition-property: background-color, color, border-color, fill, stroke, box-shadow;
+  transition-property:
+    background-color, color, border-color, fill, stroke, box-shadow;
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -85,7 +89,6 @@ body.dark-mode {
 body.dark-mode span.sub-title {
   color: hsl(var(--muted-foreground)) !important;
 }
-
 
 /* Override hardcoded dark text in case studies, about page and tags */
 body.dark-mode .section-content,
@@ -162,7 +165,12 @@ body.dark-mode section.ctr-gallery div.ctr-cards a {
   color: hsl(var(--foreground)) !important;
 }
 
-body.dark-mode section.ctr-gallery div.ctr-cards div.card div.ctr-information p.description {
+body.dark-mode
+  section.ctr-gallery
+  div.ctr-cards
+  div.card
+  div.ctr-information
+  p.description {
   color: hsl(var(--muted-foreground)) !important;
 }
 
@@ -191,31 +199,77 @@ body.dark-mode section.ctr-gallery div.ctr-cards div.card.red {
   border-color: hsla(0, 40%, 30%, 0.5) !important;
 }
 
-/* Served companies logos in dark mode: Flat white with hover opacity */
-body.dark-mode section.ctr-brands ul li img {
-  filter: brightness(0) invert(1) opacity(0.5) !important;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+/* Served companies logos in dark mode: Keep original colors and design, framing them in a subtle light card background */
+body.dark-mode section.ctr-brands ul li {
+  background-color: rgba(255, 255, 255, 0.055) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  width: 170px !important;
+  height: 60px !important;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease !important;
 }
 
-body.dark-mode section.ctr-brands ul li img:hover {
+body.dark-mode section.ctr-brands ul li:hover {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  transform: scale(1.05) !important;
+}
+
+body.dark-mode section.ctr-brands ul li img {
   filter: none !important;
   opacity: 1 !important;
-  transform: scale(1.08);
 }
 
-/* Tools logos in dark mode: Flat white, restoring colored logos on hover */
+/* Tools logos in dark mode: Keep original colors and designs on the dark card background without extra filters */
 body.dark-mode .tool-card img {
-  filter: brightness(0) invert(1) opacity(0.5) !important;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  filter: none !important;
+  opacity: 0.9;
 }
 
 body.dark-mode .tool-card:hover img {
   filter: none !important;
   opacity: 1 !important;
-  transform: scale(1.1);
 }
 
 /* Hide the main profile image shadow-gradient in dark mode */
 body.dark-mode section.ctr-home div.shadow-gradient {
   display: none !important;
+}
+
+/* Brighter and more vibrant icons in dark mode to ensure high contrast and premium look */
+body.dark-mode section.ctr-about-me div.ctr-cards div.card span.icon,
+body.dark-mode
+  section.ctr-services
+  div.ctr-cards
+  div.card
+  div.ctr-information
+  span,
+body.dark-mode .cert-icon {
+  color: hsl(335, 85%, 65%) !important;
+  background-color: hsla(335, 85%, 65%, 0.15) !important;
+}
+
+body.dark-mode .section-header i,
+body.dark-mode .image-placeholder i,
+body.dark-mode .inspiration-tags .tag i,
+body.dark-mode .carousel-btn i {
+  color: hsl(335, 85%, 65%) !important;
+}
+
+/* Style Lucide Heart icon correctly in CSS to support raw var representation */
+.ctr-inspirations .section-header i[data-lucide="heart"] svg,
+.ctr-inspirations .section-header svg[data-lucide="heart"] {
+  fill: hsl(var(--foreground)) !important;
+}
+
+body.dark-mode header.ctr-header button#theme {
+  border-color: hsla(335, 85%, 65%, 0.2) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+body.dark-mode header.ctr-header button#theme:hover {
+  background-color: hsla(335, 85%, 65%, 0.1) !important;
+  border-color: hsl(335, 85%, 65%) !important;
+  color: hsl(335, 85%, 65%) !important;
 }
