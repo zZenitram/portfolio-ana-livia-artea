@@ -273,3 +273,46 @@ body.dark-mode header.ctr-header button#theme:hover {
   border-color: hsl(335, 85%, 65%) !important;
   color: hsl(335, 85%, 65%) !important;
 }
+
+/* Header Menu & Navigation overrides for premium look and high contrast in dark mode */
+body.dark-mode header.ctr-header a.logotype {
+  color: hsl(335, 85%, 65%) !important;
+}
+
+body.dark-mode header.ctr-header a.nav-link {
+  color: hsla(var(--foreground), 0.7) !important;
+}
+
+body.dark-mode header.ctr-header a.nav-link:hover,
+body.dark-mode header.ctr-header a.nav-link.active {
+  color: hsl(335, 85%, 65%) !important;
+}
+
+body.dark-mode header.ctr-header nav.ctr-nav button.btn,
+body.dark-mode header.ctr-header nav.ctr-nav button.btn i {
+  color: hsl(var(--foreground)) !important;
+}
+
+body.dark-mode header.ctr-header #language-select {
+  border-color: hsla(335, 85%, 65%, 0.2) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+body.dark-mode header.ctr-header #language-select:hover {
+  background-color: hsla(335, 85%, 65%, 0.1) !important;
+  border-color: hsl(335, 85%, 65%) !important;
+  color: hsl(335, 85%, 65%) !important;
+}
+
+body.dark-mode header.ctr-header #language-select option {
+  background-color: hsl(var(--card)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+@media (width <= 664px) {
+  body.dark-mode header.ctr-header nav.ctr-nav #menu {
+    background-color: hsl(var(--card)) !important;
+    border-bottom: 1px solid hsla(335, 85%, 65%, 0.15) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+}

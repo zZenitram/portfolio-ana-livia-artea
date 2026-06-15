@@ -124,6 +124,11 @@ header.ctr-header nav.ctr-nav {
   align-items: center;
 }
 
+header.ctr-header div.nav-action {
+  display: flex;
+  gap: 1rem;
+}
+
 header.ctr-header nav.ctr-nav button.btn {
   display: none;
   background: transparent;
@@ -140,6 +145,15 @@ header.ctr-header nav.ctr-nav #menu {
 @media (width <= 664px) {
   header.ctr-header {
     height: auto;
+  }
+
+  header.ctr-header div.nav-action {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
   }
 
   header.ctr-header nav.ctr-nav button.btn {
@@ -173,9 +187,5 @@ header.ctr-header nav.ctr-nav #menu {
     align-items: center;
     height: 3rem;
     padding: 0 1.5rem;
-  }
-
-  header.ctr-header button#theme {
-    margin: 0.75rem 1.5rem;
   }
 }
