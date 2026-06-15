@@ -77,6 +77,39 @@ header.ctr-header button#theme:active {
   transform: scale(0.95);
 }
 
+header.ctr-header .language-picker {
+  display: flex;
+  align-items: center;
+}
+
+header.ctr-header #language-select {
+  background: transparent;
+  border: 1px solid hsla(var(--primary), 0.15);
+  color: hsl(var(--muted-foreground));
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+header.ctr-header #language-select:hover {
+  background-color: hsla(var(--primary), 0.08);
+  color: hsl(var(--primary));
+  border-color: hsla(var(--primary), 0.3);
+}
+
+header.ctr-header #language-select option {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
 header.ctr-header div.ctr-navigation {
   display: flex;
   justify-content: space-between;

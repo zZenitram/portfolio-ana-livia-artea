@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "title": "Ana Lívia Artea | Copywriter and SEO Specialist",
+    "description": "Ana Lívia Artea is a copywriter and digital marketing specialist with over 8 years of experience in SEO, strategic planning, and content creation for brands looking to grow online."
+  },
+  "header": {
+    "nav": {
+      "about": "About me",
+      "services": "Services",
+      "projects": "Projects",
+      "expertise": "Expertise",
+      "articles": "Articles",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "role": "Copywriter | Social Media | Content Analyst",
+    "description": "Hello! I'm Ana, a graduate in Advertising and Propaganda with over 8 years of experience in digital marketing. I work with strategic planning, SEO, and content creation, with flexibility, continuous learning, and a focus on results."
+  },
+  "brands": {
+    "title": "Client Companies",
+    "subtitle": "Brands that have been part of my journey"
+  },
+  "aboutMe": {
+    "title": "About me",
+    "subtitle": "Strategic communication that builds real connections",
+    "cards": {
+      "purpose": {
+        "title": "Purpose",
+        "desc": "The ability to connect brands and people through stories is what guides my journey."
+      },
+      "education": {
+        "title": "Education",
+        "desc": "Bachelor's degree in Social Communication: Advertising and Propaganda from the University of Mogi das Cruzes (UMC)."
+      },
+      "specialty": {
+        "title": "Specialty",
+        "desc": "Planning and content creation with a focus on engagement, optimization, and brand awareness."
+      }
+    },
+    "moreBtn": "Get to know more about me"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Areas where I operate in digital marketing",
+    "cards": {
+      "socialMedia": "Social media posts",
+      "blogPosts": "Blog posts",
+      "sites": "Websites & landing pages",
+      "seo": "SEO & optimization",
+      "crm": "CRM communication flows",
+      "ebooks": "E-books",
+      "socialManagement": "Social media management",
+      "community": "Community Management",
+      "monitoring": "Brand monitoring & reporting",
+      "campaigns": "Campaign planning",
+      "ads": "Advertisements",
+      "scripts": "Video scripts"
+    }
+  },
+  "gallery": {
+    "title": "Projects Gallery",
+    "subtitle": "Discover my main work",
+    "cards": {
+      "adidas": {
+        "title": "Adidas Brazil",
+        "desc": "Content creation and community management"
+      },
+      "cpfl": {
+        "title": "CPFL Energia",
+        "desc": "Content strategy, social media and influencer management"
+      },
+      "cpflSolutions": {
+        "title": "CPFL Soluções",
+        "desc": "Content strategy and social media management"
+      },
+      "spicSocial": {
+        "title": "SPIC Brasil",
+        "desc": "Content strategy and social media management"
+      },
+      "spicBlog": {
+        "title": "SPIC Brasil",
+        "desc": "Content creation for website and blog"
+      },
+      "fleury": {
+        "title": "Grupo Fleury",
+        "desc": "Content strategy, social media management, and campaigns"
+      }
+    }
+  },
+  "expertise": {
+    "title": "What I write about",
+    "subtitle": "Topics I transform into strategic content",
+    "cards": {
+      "marketing": "📈 Digital Marketing",
+      "ai": "🤖 Artificial Intelligence",
+      "energy": "⚡ Energy Market",
+      "healthtech": "🏥 Healthtech",
+      "tech": "💻 Technology",
+      "esg": "🌱 ESG",
+      "employer": "🏢 Employer branding",
+      "sales": "💰 Sales",
+      "institutional": "🏛️ Institutional"
+    }
+  },
+  "article": {
+    "title": "Articles",
+    "subtitle": "My texts written for communication portals",
+    "readMore": "Read more"
+  },
+  "contactMe": {
+    "title": "Shall we write the next story together?",
+    "subtitle": "Get in touch to strengthen your brand"
+  },
+  "footer": {
+    "copyright": "© 2026 — Copywriter & Freelance Writer"
+  },
+  "aboutFull": {
+    "back": "Back to Home",
+    "title": "A little more about me",
+    "intro": {
+      "p1": "I am passionate about cats, books, cinema, music, and communication. Wherever I go, you can be sure you will see me with a good book (physical or on my Kindle). 🐱📱",
+      "p2": "In my free time, I also enjoy coloring, studying languages (currently dedicating myself to Italian), playing games, or watching gameplays on YouTube. I love traveling, and two places I adore visiting are Guararema, my second home, and Gramado, in the Serra Gaúcha. ✈️",
+      "p3": "When it comes to music, many are surprised when I say I love rock and metal, but the truth is I listen to a bit of everything. I am curious, I love sweets, I enjoy visiting museums, and I always strive to deliver my best in everything I do! That's me, nice to meet you! 🍷"
+    },
+    "images": {
+      "pinacoteca": "Ana Lívia at the Pinacoteca de São Paulo",
+      "palestra": "Ana Lívia delivering a lecture",
+      "gato": "Ana Lívia's pet cat",
+      "livros": "Classic books and flowers",
+      "beethoven": "Ana Lívia visiting the Beethoven Museum",
+      "rock": "Ana Lívia at a rock concert",
+      "rua": "Illuminated street in Gramado",
+      "igreja": "Gramado Church at night"
+    },
+    "inspire": {
+      "title": "What inspires me",
+      "subtitle": "What I love to learn about and stay updated on",
+      "tags": {
+        "literature": "Literature",
+        "cinema": "Cinema",
+        "music": "Music",
+        "art": "Art History",
+        "games": "Games",
+        "branding": "Branding",
+        "beauty": "Beauty and Fashion",
+        "languages": "Languages and cultures",
+        "exhibitions": "New exhibitions"
+      }
+    },
+    "certificates": {
+      "title": "Certificates",
+      "items": {
+        "seoAI": "SEO in the Age of Artificial Intelligence",
+        "nextSEO": "Next SEO",
+        "userDesign": "User-Centered Design",
+        "creative": "Creative Writing",
+        "brandingRev": "Branding (R)evolution",
+        "brandingEss": "Essential Branding",
+        "leadership": "Leadership Training",
+        "productivity": "Productivity and Performance",
+        "seoFound": "SEO Fundamentals"
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "english": {
+        "name": "English - C2 (CEFR) EF SET",
+        "level": "Intermediate level"
+      },
+      "italian": {
+        "name": "Italian - A1 (CEFR)",
+        "level": "Basic level"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "p1": "I graduated in <strong>Social Communication: Advertising and Propaganda from the University of Mogi das Cruzes (UMC)</strong>.",
+      "p2": "In 2017, I won the <strong>UMC Young Academic Talent</strong> award, and after finishing the course I was a finalist at <strong>Intercom Sudeste 2021</strong>, with a project created as part of my final thesis that aims to foster tourism in the Alto Tietê region."
+    },
+    "tools": {
+      "title": "Tools",
+      "subtitle": "I have experience with the following platforms"
+    }
+  },
+  "adidas": {
+    "back": "Back to Home",
+    "subtitle": "Content creation and community management",
+    "intro": {
+      "p1": "At the end of 2024, Adidas Brasil launched the <strong>Parceiro\\\\\\Adidas Program</strong> to strengthen the brand's connection with personal trainers across the country. Professionals registered in the program recommend the brand's products and earn a 10% commission on each sale made through their partner link.",
+      "p2": "Partners also receive exclusive news and coupons distributed in the <strong>official WhatsApp community</strong>, as well as offers and other updates via <strong>email marketing flows.</strong>",
+      "p3": "Today, the <a href=\"https://conteudo.parceiroadidas.com.br/seja-um-parceiro-adidas\" target=\"_blank\" rel=\"noopener noreferrer\">program</a> has more than <strong>2,400 participants spread across about 600 cities in Brazil.</strong> In 1 year, Parceiro\\\\\\Adidas generated more than BRL 700k in sales, totaling more than BRL 70k in commissions for partners."
+    },
+    "desafio": {
+      "title": "The challenge",
+      "p1": "When the Brivia team received the account (Sep. 2025) we needed to build a <strong>management and evolution strategy for the program</strong> - from the perspective of the WhatsApp community and CRM -, focusing on acquisition, performance, and activation of the target audience.",
+      "p2": "An important point in this journey is the relevance of Adidas today: a global company with a <strong>community of brand lovers</strong> that, in addition to the financial gains with Parceiro\\\\\\Adidas, seeks more connection with the brand and what it represents."
+    },
+    "solucao": {
+      "title": "Our solution",
+      "p1": "We combined performance and experience to elevate the level of Parceiro\\\\\\Adidas: from an affiliate program, we transitioned into an <strong>important partnership ecosystem.</strong> We implemented new engagement dynamics, gamification, challenges that generate exclusive experiences, and a closer communication, with our partners at the center of this structure.",
+      "p2": "In just a few months of working on the account, we boosted base interaction with new content formats and the creation of new commercial campaigns, such as <strong>Black Friday Parceiro\\\\\\Adidas, resulting in the program's two best sales months in 1 year of existence!</strong>"
+    },
+    "bf": {
+      "title": "Black Friday Parceiro\\\\\\Adidas",
+      "p1": "During Oct. and Nov. 2025, we created special campaign content, such as posts with sales tips, the most sought-after products of the week, stickers, and a <strong>first ranking of top adidas partners</strong> - with prize incentives for performance.",
+      "p2": "We also implemented a <strong>special commission dynamic and distributed media kits with designs for feed and stories</strong>, to encourage inactive partners and increase sales efforts during the Black Friday period."
+    },
+    "ano1": {
+      "title": "1 year of Parceiro\\\\\\Adidas",
+      "p1": "To celebrate the program's 1st year, we invited <strong>one of the first registered partners for a day of immersion and recording</strong> at the Adidas office in Alphaville, São Paulo. We had a day full of exchanges and connections, where we could learn more about the professional's story and their relationship with the brand.",
+      "p2": "The videos were posted in the WhatsApp community as a series of <strong>content snippets</strong> (partner story and sales tips) and triggered via marketing email to reinforce the user base."
+    },
+    "dropset": {
+      "title": "Dropset 4 Launch in São Paulo",
+      "p1": "In Feb. 2026, we held our <strong>first launch event for the program</strong>, in partnership with the brand's branding agency: an exclusive meeting at the new Adidas Space in Ibirapuera Park for the launch of the Dropset 4 sneaker.",
+      "p2": "We gathered standout partners of the program for a morning of lectures, networking, and a strength workout with personal trainer and adidas ambassador <strong>Caio Cabral</strong>, along with the <strong>special participation of Olympic champion Arthur Zanetti</strong>.",
+      "p3": "We generated great impact of the event on the partners' social networks, expanding the visibility of the program, and strengthened our connection with the participants."
+    },
+    "hoje": {
+      "title": "The program today",
+      "p1": "As responsible for creative coordination, management, and editorial strategy of the community, I followed the evolution of Parceiro\\\\\\Adidas to a <strong>more dynamic, participatory, and connected program.</strong>",
+      "p2": "Today, communication is built together with the partners, opening space for <strong>more authentic content, real exchanges, and an active presence</strong> in their daily lives. The program gains momentum with constant news, exclusive activations, and gamification journeys that encourage participation, recognize results, and bring partners closer to the brand.",
+      "p3": "This new moment transforms the partner's role: <strong>from participant to protagonist.</strong> And makes the program a living environment that moves, engages, and continuously evolves from the people who are part of it."
+    }
+  },
+  "cpfl": {
+    "back": "Back to Home",
+    "subtitle": "Content strategy and social media management",
+    "intro": {
+      "p1": "CPFL Energia operates as <strong>one of the largest energy distributors in Brazil</strong>, serving municipalities in the states of São Paulo and Rio Grande do Sul. Through its three distributors, it has more than 15,000 employees spread across the country, and brings <strong>electricity to 10 million addresses</strong>, which corresponds to more than 22 million people served.",
+      "p2": "CPFL Energia is also a <strong>leader in the sale of incentivized energy for free market clients</strong> and stands out as one of the leaders in clean energy generation, with a 100% renewable portfolio. Since 1912, they have offered solutions across the entire electrical chain, covering generation, transmission, distribution, commercialization, and services."
+    },
+    "desafio": {
+      "title": "The challenge",
+      "p1": "CPFL sought to <strong>improve its relationship with customers on social media</strong>, recognizing the different realities and objectives of each brand and channel. We received the challenge of creating a consistent and effective content strategy for each brand, considering its target audience, objectives, and the need to build a positive and close image with customers, dealing with the criticisms inherent to the sector."
+    },
+    "solucao": {
+      "title": "Our solution",
+      "p1": "How to talk about energy - a technical and often sensitive topic - in a light way and, above all, participating in people's conversations?",
+      "p2": "It was with this in mind that we created a <strong>social guide for CPFL Energia</strong>, which defined the brand's personality through archetypes and brand personas, guiding all digital content creation.",
+      "p3": "In this delivery, we structured a management that connects CPFL Energia's communication with its business objectives, considering its presence in different customer touchpoints; the organization of content and formats by territories and editorias; and a clear definition of the brand persona.",
+      "p4": "In 6 months of operation, <strong>we doubled the follower base on Instagram</strong> and had major growth in the base and engagement of the LinkedIn and Facebook pages, as well as the YouTube channel.",
+      "p5": "Based on this, we created <strong>content that informs, engages, and generates identification with the audience across various social channels</strong>. From current events to the trends that are moving the networks, we went through topics like conscious consumption, fun facts about the world of energy, and the team's daily routine. We dove into trends and translated them into the brand's universe, always with creative strategy and purpose!"
+    },
+    "eb": {
+      "title": "Employer Branding",
+      "p1": "In this change of strategy, we put <strong>CPFL employees at the center of content creation</strong>, as they are the ones who make the company's daily life happen and many are the interface with the final customer.",
+      "p2": "We invested in employer brand content, highlighting the promotion of new opportunities in the CPFL Energia team, internship programs, get-to-know-the-area segments, the Electricians School, and more! Supported by paid media, we expanded reach and engagement, and also created a new profile on Glassdoor alongside HR for those looking for more information about the company.",
+      "p3": "We humanized our content and opened space for professionals to share their stories and add their energy to CPFL."
+    },
+    "pinterest": {
+      "title": "Case on Pinterest",
+      "p1": "To further consolidate CPFL Energia's presence in people's lives on social media, we identified a new platform to expand this connection: Pinterest.",
+      "p2": "By creating a profile on the world's largest inspiration platform, we connected the brand to the imagination and daily life of its consumers, through boards like decoration, conscious consumption, curiosity, among others.",
+      "p3": "We positioned CPFL Energia as the 1st energy distributor to have a profile on the platform, a case <strong>recognized by Pinterest itself as one of the best in Brazil!</strong> Combining content and media, we increased brand engagement by 40% and reduced our CPM by almost 30%."
+    },
+    "influencers": {
+      "title": "Influencer Management",
+      "p1": "Leading the account, I was also responsible for <strong>managing relationships with influencers</strong>, conducting all stages of the process, from profile curation and initial contact to negotiation, preparation of strategic briefings, and monitoring deliveries.",
+      "p2": "The selection of creators mainly considers CPFL Energia's areas of operation. The focus is on identifying profiles with regional relevance, strong alignment with the target audience, and potential for genuine connection with local communities, alongside larger-reach influencers for national campaigns."
+    }
+  },
+  "notFound": {
+    "title": "Oops! Page not found",
+    "description": "It looks like you got lost on the way…<br />but that's okay, let's go back! 💖",
+    "btn": "Back to Home"
+  }
+}
