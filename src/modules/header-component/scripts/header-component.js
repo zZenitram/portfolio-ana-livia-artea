@@ -33,6 +33,14 @@ class HeaderComponent extends HTMLElement {
         });
 
         this.controller.init();
+
+        const langSelect = this.querySelector("#language-select");
+        if (langSelect && window.i18n) {
+            langSelect.value = window.i18n.currentLang;
+            langSelect.addEventListener("change", (e) => {
+                window.i18n.setLanguage(e.target.value);
+            });
+        }
     }
 
     disconnectedCallback() {

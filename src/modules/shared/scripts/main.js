@@ -1,6 +1,9 @@
 import { initGlobalAnimations } from './animations.js';
 import { checkAndScrollToHash } from './scroll.js';
 import { initThemeChange } from './theme.js';
+import { i18n } from './i18n.js';
+
+await i18n.init();
 
 import '../../header-component/scripts/header-component.js';
 import '../../home-component/scripts/home-component.js';
