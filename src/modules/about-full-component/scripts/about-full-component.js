@@ -27,55 +27,55 @@ class AboutFullComponent extends HTMLElement {
 
         const certificateData = [
             {
-                name: "SEO na Era da Inteligência Artificial",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.seoAI") : "SEO na Era da Inteligência Artificial",
                 description: "Conversion",
                 url: "https://drive.google.com/file/d/1gIXLAWonFXzfwrrX_WnlcwPr41rU7yH5/view",
                 icon: "search"
             },
             {
-                name: "Next SEO",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.nextSEO") : "Next SEO",
                 description: "Conversion",
                 url: "https://drive.google.com/file/d/1q9H7CE7aYcOwK2JoH0-Hp0r2nJVjP5lf/view",
                 icon: "trending-up"
             },
             {
-                name: "Design Centrado no Usuário",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.userDesign") : "Design Centrado no Usuário",
                 description: "PUCRS",
                 url: "https://drive.google.com/file/d/1PiJSqJ_KuNI4zkxgid89ddHI7vdY-lt7/view",
                 icon: "mouse-pointer-2"
             },
             {
-                name: "Escrita Criativa",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.creative") : "Escrita Criativa",
                 description: "PUCRS",
                 url: "https://drive.google.com/file/d/1lsNeip3Il-8uh6aSXYM4Sw5pbEYFLGpQ/view",
                 icon: "feather"
             },
             {
-                name: "(R)evolução do Branding",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.brandingRev") : "(R)evolução do Branding",
                 description: "Ana Couto/Laje",
                 url: "https://drive.google.com/file/d/1K0rdw2-Zhzn7gL-fssZx_DlMDIFudRan/view",
                 icon: "award"
             },
             {
-                name: "Branding Essencial",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.brandingEss") : "Branding Essencial",
                 description: "Ana Couto/Laje",
                 url: "https://drive.google.com/file/d/1_mBA2Q3xEFBaa1UIx06yTz5FLYMgxOGN/view?usp=sharing",
                 icon: "sparkles"
             },
             {
-                name: "Formação em Liderança",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.leadership") : "Formação em Liderança",
                 description: "Escola Conquer",
                 url: "https://drive.google.com/file/d/1EvVW3P4jLAWyIUpNpENygURoJ1rYc9Mg/view",
                 icon: "users-2"
             },
             {
-                name: "Produtividade e Performance",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.productivity") : "Produtividade e Performance",
                 description: "Escola Conquer",
                 url: "https://drive.google.com/file/d/1dqWWyioIfBXnZfod1zggy9Im_DfuatZ1/view?usp=sharing",
                 icon: "zap"
             },
             {
-                name: "Fundamentos de SEO",
+                name: window.i18n ? window.i18n.t("aboutFull.certificates.items.seoFound") : "Fundamentos de SEO",
                 description: "LinkedIn Learning",
                 url: "https://drive.google.com/file/d/15B31VPLxROwY7t9DIVaexhCGM0msUhee/view?usp=sharing",
                 icon: "search"

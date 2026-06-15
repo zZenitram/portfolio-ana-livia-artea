@@ -28,15 +28,20 @@
     </script>
     <main class="ctr-main">
       <section class="ctr-section">
-        <h1 class="title">Oops! Página não encontrada</h1>
+        <h1 class="title" data-i18n="notFound.title">Oops! Página não encontrada</h1>
 
-        <p class="description">
+        <p class="description" data-i18n="notFound.description" data-i18n-html>
           Parece que você se perdeu no caminho…<br />
           mas tudo bem, vamos voltar! 💖
         </p>
 
-        <a href="/" class="btn">Voltar para o início</a>
+        <a href="/" class="btn" data-i18n="notFound.btn">Voltar para o início</a>
       </section>
     </main>
+
+    <script type="module">
+      import { i18n } from './src/modules/shared/scripts/i18n.js';
+      await i18n.init();
+    </script>
   </body>
 </html>
