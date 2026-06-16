@@ -2,6 +2,12 @@ import { initGlobalAnimations } from './animations.js';
 import { checkAndScrollToHash } from './scroll.js';
 import { initThemeChange } from './theme.js';
 import { i18n } from './i18n.js';
+import { Analytics } from './analytics.js';
+import { initTracking } from './tracking.js';
+
+// ── Analytics: inicializa o GA4 o mais cedo possível ──────────────────────
+// O script do gtag é injetado de forma assíncrona para não bloquear o render.
+Analytics.init();
 
 await i18n.init();
 
@@ -24,3 +30,7 @@ initThemeChange();
 initGlobalAnimations();
 window.addEventListener('load', checkAndScrollToHash);
 window.addEventListener('hashchange', checkAndScrollToHash);
+
+// ── Analytics: inicia rastreamentos após componentes carregados ────────────
+// initTracking() dispara page_view e configura todos os observers/listeners.
+initTracking();
