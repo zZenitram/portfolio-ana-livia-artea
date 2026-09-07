@@ -42,7 +42,7 @@ class AdidasComponent extends HTMLElement {
             ],
             "ano1-grid": [
                 { name: "Entrevista no Escritório da Adidas ", url: "./public/jpg/visita_adidas_entrevista.jpg" },
-                { name: "Foto com a equipe da adidas", url: "./public/webm/programa_de_pontos_adidas.webm" },
+                { name: "Foto com a equipe da adidas", url: "./public/mp4/programa_de_pontos_adidas.mp4" },
                 { name: "Foto com a equipe da adidas", url: "./public/jpg/visita_adidas_equipe.jpg" },
                 { name: "Comemoração de 1 ano de programa", url: "./public/png/aniversario_programa_parceiro_adidas.png" }
             ],
