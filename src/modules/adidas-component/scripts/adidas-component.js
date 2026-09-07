@@ -28,6 +28,12 @@ class AdidasComponent extends HTMLElement {
                 { name: "Desafio Parceiro Adidas Esportes", url: "./public/png/desafio_parceiro_adidas_esportes.png" },
                 { name: "Desafio Parceiro Adidas Treino", url: "./public/png/desafio_parceiro_adidas_treino.png" }
             ],
+            "solution-grid": [
+                { name: "solution 1", url: "./public/gif/linha_optime.gif" },
+                { name: "solution 2", url: "./public/png/dicas_parceiro_adidas.png" },
+                { name: "solution 3", url: "./public/gif/lancamentos_dropset.gif" },
+                { name: "solution 4", url: "./public/png/cupom_de_desconto_adidas.png" }
+            ],
             "bf-grid": [
                 { name: "Black Friday 1", url: "./public/png/black_friday_adidas.png" },
                 { name: "Black Friday 2", url: "./public/gif/parceiro_adidas_black_friday.gif" },
@@ -36,7 +42,7 @@ class AdidasComponent extends HTMLElement {
             ],
             "ano1-grid": [
                 { name: "Entrevista no Escritório da Adidas ", url: "./public/jpg/visita_adidas_entrevista.jpg" },
-                { name: "Foto com a equipe da adidas", url: "./public/mp4/programa_de_pontos_adidas.mp4" },
+                { name: "Foto com a equipe da adidas", url: "./public/webm/programa_de_pontos_adidas.webm" },
                 { name: "Foto com a equipe da adidas", url: "./public/jpg/visita_adidas_equipe.jpg" },
                 { name: "Comemoração de 1 ano de programa", url: "./public/png/aniversario_programa_parceiro_adidas.png" }
             ],
@@ -48,10 +54,10 @@ class AdidasComponent extends HTMLElement {
                 { name: "Dropset 5", url: "./public/jpg/evento_dropset_quatro_cenario.jpg" }
             ],
             "hoje-grid": [
-                { name: "Hoje 1", url: "./public/gif/linha_optime.gif" },
-                { name: "Hoje 2", url: "./public/png/dicas_parceiro_adidas.png" },
-                { name: "Hoje 3", url: "./public/gif/lancamentos_dropset.gif" },
-                { name: "Hoje 5", url: "./public/png/cupom_de_desconto_adidas.png" }
+                { name: "Hoje 1", url: "./public/jpeg/adidas_squad.jpeg" },
+                { name: "Hoje 2", url: "./public/jpeg/pais_que_treinam.jpeg" },
+                { name: "Hoje 3", url: "./public/jpeg/o_club_dos_mvts.jpeg" },
+                { name: "Hoje 4", url: "./public/webm/lancamento_adidas_squad.webm" }
             ]
         };
 

@@ -26,20 +26,20 @@ class CpflComponent extends HTMLElement {
             "solucao-grid-1": [
                 { name: "Geração de Energia 100% Renovável", url: "public/jpg/geracao_renovavel.jpg" },
                 { name: "Dicas de Economia de Energia no Outono", url: "public/jpg/dicas_energia_outono.jpg" },
-                { name: "Vídeo Curto-Circuito com Gatinhos", url: "public/mp4/curto_circuito_gatinhos_foto_vídeo.mp4", type: "video" },
+                { name: "Vídeo Curto-Circuito com Gatinhos", url: "public/webm/curto_circuito_gatinhos_foto_vídeo.webm", type: "video" },
                 { name: "Equipes de Campo da CPFL", url: "public/jpg/equipes_em_campo.jpg" }
             ],
             "solucao-grid-2": [
                 { name: "Post A Vida de Eletricista", url: "public/jpg/a_vida_do_eletricista.jpg" },
                 { name: "Post Engajamento Dia a Dia do Time", url: "public/jpg/ha_quantos_meses.jpg" },
                 { name: "Miniaturas Escola de Eletricistas CPFL", url: "public/jpg/energia_eletricistas.jpg" },
-                { name: "Post Temático Stranger Things", url: "public/mp4/stranger_things_video.mp4", type: "video" }
+                { name: "Post Temático Stranger Things", url: "public/webm/stranger_things_video.webm", type: "video" }
             ],
             "employer-branding-grid": [
                 { name: "Divulgação de Vagas CPFL Energia", url: "public/png/vagas.png" },
-                { name: "Vídeo Depoimento Histórias de Energia", url: "public/mp4/historias_de_energia.mp4", type: "video" },
-                { name: "Vídeo Conheça a Área", url: "public/mp4/conheca_a_area.mp4", type: "video" },
-                { name: "Vídeo Depoimento Memória Mais Feliz", url: "public/mp4/memoria_mais_feliz.mp4", type: "video" }
+                { name: "Vídeo Depoimento Histórias de Energia", url: "public/webm/historias_de_energia.webm", type: "video" },
+                { name: "Vídeo Conheça a Área", url: "public/webm/conheca_a_area.webm", type: "video" },
+                { name: "Vídeo Depoimento Memória Mais Feliz", url: "public/webm/memoria_mais_feliz.webm", type: "video" }
             ],
             "pinterest-grid": [
                 { name: "Pin Consumo Consciente Organização de Cabos", url: "public/jpeg/organizacao_de_cabos.jpeg" },
@@ -48,8 +48,8 @@ class CpflComponent extends HTMLElement {
                 { name: "Pin Home Office Sustentável", url: "public/jpg/home_office_sustentavel.jpg" }
             ],
             "influenciadores-grid": [
-                { name: "Campanha com Influenciador Pedro Leonardo (@pedroleonardocosta)", url: "public/mp4/pedro_leonardo.mp4", type: "video" },
-                { name: "Campanha com Influenciadora Fernanda Fabris (@mae_poramor)", url: "public/mp4/fernanda_fabris.mp4", type: "video" }
+                { name: "Campanha com Influenciador Pedro Leonardo (@pedroleonardocosta)", url: "public/webm/pedro_leonardo.webm", type: "video" },
+                { name: "Campanha com Influenciadora Fernanda Fabris (@mae_poramor)", url: "public/webm/fernanda_fabris.webm", type: "video" }
             ]
         };
 

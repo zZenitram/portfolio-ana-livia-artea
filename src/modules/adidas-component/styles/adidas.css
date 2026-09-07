@@ -286,6 +286,8 @@
 /* Black Friday & Hoje Specific Grid Ratio */
 #bf-grid .image-card,
 #bf-grid .image-placeholder,
+#solution-grid .image-card,
+#solution-grid .image-placeholder,
 #hoje-grid .image-card,
 #hoje-grid .image-placeholder {
   aspect-ratio: 1 / 1;
