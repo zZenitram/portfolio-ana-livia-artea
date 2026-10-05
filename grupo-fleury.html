@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Grupo Fleury | Ana Lívia Artea</title>
+
+    <meta
+      name="description"
+      content="Case de sucesso Grupo Fleury: estratégia de conteúdo e gestão de redes sociais por Ana Lívia Artea."
+    />
+
+    <meta name="author" content="Lucas Martinez Rodrigues de Oliveira" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#C8102E" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.analiviaartea.com.br/grupo-fleury.html" />
+
+    <!-- Google Analytics 4 — noscript fallback -->
+    <noscript>
+      <img
+        height="1" width="1" style="display:none"
+        src="https://www.googletagmanager.com/collect?v=2&tid=G-C3XPSWEWBM"
+        alt=""
+      />
+    </noscript>
+
+    <link rel="icon" href="/public/svg/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/public/favicon.png" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/public/favicon.png" />
+    <link rel="stylesheet" href="src/modules/shared/styles/main.css" />
+    <link rel="stylesheet" href="src/modules/shared/styles/variables.css" />
+    <link rel="stylesheet" href="src/modules/header-component/styles/header.css" />
+    <link rel="stylesheet" href="src/modules/fleury-component/styles/fleury.css" />
+    <link rel="stylesheet" href="src/modules/contact-me-component/styles/contact-me.css" />
+    <link rel="stylesheet" href="src/modules/footer-component/styles/footer.css" />
+    <link rel="stylesheet" href="src/modules/shared/styles/animations.css" />
+  </head>
+
+  <body>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'light-mode';
+        document.body.classList.add(savedTheme);
+        const savedLang = localStorage.getItem('portfolio-lang') || 'pt';
+        if (savedLang !== 'pt') {
+          document.documentElement.classList.add('i18n-loading');
+        }
+      })();
+    </script>
+    <!-- (Portfolio) Header -->
+    <header-component></header-component>
+
+    <!-- (Portfolio) Grupo Fleury Case -->
+    <fleury-component></fleury-component>
+
+    <!-- (Portfolio) Contact Me -->
+    <contact-me-component></contact-me-component>
+
+    <!-- (Portfolio) Footer -->
+    <footer-component></footer-component>
+
+    <!-- Media Modal Component -->
+    <media-modal-component></media-modal-component>
+
+    <script type="module" src="src/modules/shared/scripts/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </body>
+</html>
