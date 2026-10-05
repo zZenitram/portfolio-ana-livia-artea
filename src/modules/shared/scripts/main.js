@@ -24,6 +24,7 @@ import '../../expertise-component/scripts/expertise-component.js';
 import '../../footer-component/scripts/footer-component.js';
 import '../../adidas-component/scripts/adidas-component.js';
 import '../../cpfl-component/scripts/cpfl-component.js';
+import '../../fleury-component/scripts/fleury-component.js';
 import '../../media-modal-component/scripts/media-modal-component.js';
 
 initThemeChange();
